@@ -1,0 +1,354 @@
+{
+	"routes": [
+		{
+			"id": "apps_query",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "apps_read",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "apps_restart",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "apps_restart_all",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "apps_save",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api",
+			"timeout": 120000
+		},
+		{
+			"id": "apps_remove",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "apps_stop",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "apps_stop_all",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "apps_analyzator",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "templates",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "templates_apply",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api",
+			"timeout": 50000
+		},
+		{
+			"id": "fixpermissions",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api",
+			"timeout": 50000
+		},
+		{
+			"id": "settings_read",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "settings_save",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "updatetotal",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "filebrowser",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "filebrowser_read",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "filebrowser_save",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "users_query",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "users_read",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "users_remove",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "users_insert",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "users_update",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "account_read",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "account_save",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "alarms_query",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "alarms_save",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "alarms_remove",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "notifications_query",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "notifications_clear",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "login",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 2,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "logout",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "build_read",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"id": "build_save",
+			"method": "API",
+			"url": "/apiv1/",
+			"auth": 1,
+			"error": "Action not found",
+			"owner": "controller_api"
+		},
+		{
+			"method": "POST",
+			"url": "/api/upload/",
+			"auth": 1,
+			"owner": "controller_api",
+			"timeout": 120000,
+			"upload": true,
+			"limit": 102400
+		},
+		{
+			"method": "POST",
+			"url": "/api/filebrowser/",
+			"auth": 1,
+			"owner": "controller_api",
+			"upload": true,
+			"limit": 102400
+		},
+		{
+			"method": "POST",
+			"url": "/apiv1/",
+			"auth": 1,
+			"owner": "controller_api"
+		},
+		{
+			"method": "POST",
+			"url": "/apiv1/",
+			"auth": 2,
+			"owner": "controller_api"
+		},
+		{
+			"method": "GET",
+			"url": "/backup/",
+			"auth": 1,
+			"owner": "controller_api",
+			"schema": "Operations",
+			"timeout": 1200000
+		},
+		{
+			"method": "GET",
+			"url": "/download/{id}/",
+			"auth": 1,
+			"owner": "controller_api",
+			"params": "id:string",
+			"timeout": 120000
+		},
+		{
+			"method": "GET",
+			"url": "/logoff/",
+			"owner": "controller_default"
+		},
+		{
+			"method": "GET",
+			"url": "/logs/{id}/",
+			"owner": "controller_api",
+			"params": "id:string",
+			"schema": "Apps"
+		},
+		{
+			"method": "GET",
+			"url": "/*",
+			"auth": 1,
+			"owner": "controller_default"
+		},
+		{
+			"method": "GET",
+			"url": "/*",
+			"auth": 2,
+			"owner": "controller_default"
+		},
+		{
+			"method": "SOCKET",
+			"url": "/",
+			"auth": 1,
+			"owner": "controller_api"
+		}
+	]
+}

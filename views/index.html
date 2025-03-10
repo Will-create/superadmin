@@ -17,25 +17,26 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/mode/nginx/nginx.min.js"></script>
 	@{import('head', 'ui.css + default.css', 'ui.js + helpers.js + syntax.js', 'favicon.ico')}
 </head>
-<body data---="exec">
+<body>
+	<ui-component name="exec"></ui-component>
 
-	<div data---="loading" class="ui-loading"></div>
-	<div data---="websocket__null__url:/;encoder:false"></div>
-	<div data---="console__common.showlogs__datasource:common.logs"></div>
-	<div data---="mainprogress__common.progress"></div>
-	<div data---="shortcuts"></div>
-	<div data---="windows__common.windows"></div>
-	<div data---="notify__null__position:bottom right"></div>
+	<ui-component name="loading" class="ui-loading"></ui-component>
+	<ui-component name="websocket" path="null" config="url:/;encoder:false"></ui-component>
+	<ui-component name="console" path="common.showlogs" config="datasource:common.logs"></ui-component>
+	<ui-component name="mainprogress" path="common.progress"></ui-component>
+	<ui-component name="shortcuts"></ui-component>
+	<ui-component name="windows" path="common.windows"></ui-component>
+	<ui-component name="notify" path="null" config="position:bottom right"></ui-component>
 
-	<div data---="LAZY directory__null__placeholder:@(Search)"></div>
-	<div data---="LAZY fileuploader"></div>
-	<div data---="LAZY floatinginput"></div>
-	<div data---="LAZY message__null__style:2;button:@(Close)"></div>
-	<div data---="LAZY approve"></div>
-	<div data---="LAZY menu__null__style:2"></div>
-	<div data---="LAZY builder"></div>
+	<ui-component name="LAZY directory" path="null" config="placeholder:@(Search)"></ui-component>
+	<ui-component name="LAZY fileuploader"></ui-component>
+	<ui-component name="LAZY floatinginput"></ui-component>
+	<ui-component name="LAZY message" path="null" config="style:2;button:@(Close)"></ui-component>
+	<ui-component name="LAZY approve"></ui-component>
+	<ui-component name="LAZY menu" path="null" config="style:2"></ui-component>
+	<ui-component name="LAZY builder"></ui-component>
 
-	<div data---="notificationspanel__common.shownotifications__exec:common/notifications_load;autoremove:0;clear:common/notifications_clear">
+	<ui-component name="notificationspanel" path="common.shownotifications" config="exec:common/notifications_load;autoremove:0;clear:common/notifications_clear">
 		<script type="text/html">
 			<div class="notification">
 				<span{{ if type === 'warning' }} class="red"{{ fi }}><i class="far fa-calendar mr5"></i><strong>{{ dtcreated | format('[ts]') }}</strong></span> - {{ body | raw }}
@@ -44,21 +45,21 @@
 	</div>
 
 	<div class="ui-dark">
-		<div data---="LAZY notifybar"></div>
+		<ui-component name="LAZY notifybar"></ui-component>
 	</div>
 
 	<div class="mainmenu exec" data-exec="common/showmenu"><i class="fa fa-align-justify"></i></div>
 
-	<div data---="layout2__null__parent:window;marginxs:34" class="invisible">
+	<ui-component name="layout2" path="null" config="parent:window;marginxs:34" class="invisible">
 		<div data-type="left" data-size="230,230,200,0" data-scrollbar="selector:main;margin:0">
 			<main>
 				<div class="stats" data-scope="sysinfo">
 					<div class="padding npb">
-						<div data---="gauge__?.cpu__colors:30 #8CC152 25,40 #EDBC5A 35,30 #DB3737 45"></div>
+						<ui-component name="gauge" path="?.cpu" config="colors:30 #8CC152 25,40 #EDBC5A 35,30 #DB3737 45"></ui-component>
 						<div class="center mt10" data-bind="?.processes__text:Thelpers.pluralize(value, @('# processes', '# process', '# processes', '# processes'))__empty"></div>
 						<div class="center" data-bind="?.version_server__text__empty"></div>
 					</div>
-					<div data---="livestats__?.live__max:100;colors:cpu=#E73323,memory=#68B25B,storage=#2E67C5" class="mt10"></div>
+					<ui-component name="livestats" path="?.live" config="max:100;colors:cpu=#E73323,memory=#68B25B,storage=#2E67C5" class="mt10"></ui-component>
 					<div class="padding">
 						<div class="keyvalue-group">
 							<div data-bind="?.live.memory__html__helper:progress"></div>
@@ -94,14 +95,16 @@
 				</div>
 
 				<br />
-				<ul class="nav" data---="selected__common.page__selector:li">
-					<li class="exec" data-exec="common/page" data-if="apps"><span data-bind="apps.apps.length__text__show"></span><i class="fa fa-navicon"></i>@(Applications)</li>
-					<!-- <li class="exec" data-exec="common/page" data-if="stats"><i class="fa fa-area-chart"></i>@(Statistics)</li>
-					<li class="exec" data-exec="common/page" data-if="alarms"><i class="fa fa-bell"></i>@(Alarms)</li>
-					<li class="exec" data-exec="common/page" data-if="settings"><i class="fa fa-wrench"></i>@(Settings)</li> -->
-					<li class="exec" data-exec="common/notifications">@{if PREF.notifications}<span>@{PREF.notifications}</span>@{fi}<i class="far fa-bell"></i>@(Notifications)</li>
-					<li class="exec" data-exec="common/more"><i class="fas fa-plus"></i>@(More)</li>
-				</ul>
+				<ui-component name="selected" path="common.page" config="selector:li">
+					<ul class="nav">
+						<li class="exec" data-exec="common/page" data-if="apps"><span data-bind="apps.apps.length__text__show"></span><i class="fa fa-navicon"></i>@(Applications)</li>
+						<!-- <li class="exec" data-exec="common/page" data-if="stats"><i class="fa fa-area-chart"></i>@(Statistics)</li>
+						<li class="exec" data-exec="common/page" data-if="alarms"><i class="fa fa-bell"></i>@(Alarms)</li>
+						<li class="exec" data-exec="common/page" data-if="settings"><i class="fa fa-wrench"></i>@(Settings)</li> -->
+						<li class="exec" data-exec="common/notifications">@{if PREF.notifications}<span>@{PREF.notifications}</span>@{fi}<i class="far fa-bell"></i>@(Notifications)</li>
+						<li class="exec" data-exec="common/more"><i class="fas fa-plus"></i>@(More)</li>
+					</ul>
+				</ui-component>
 				<!--
 				<hr />
 				<ul class="nav">
@@ -112,15 +115,15 @@
 			</main>
 		</div>
 		<div data-type="main">
-			<div data---="part__common.page__if:apps;init:applications_init;url:/parts/apps.html;reload:apps/reload"></div>
-			<div data---="part__common.page__if:settings;reload:settings/reload;url:/parts/settings.html"></div>
-			<div data---="part__common.page__if:alarms;reload:alarms/reload;url:/parts/alarms.html"></div>
-			<div data---="part__common.page__if:users;reload:users/reload;url:/parts/users.html"></div>
+			<ui-component name="part" path="common.page" config="if:apps;init:applications_init;url:/parts/apps.html;reload:apps/reload"></ui-component>
+			<ui-component name="part" path="common.page" config="if:settings;reload:settings/reload;url:/parts/settings.html"></ui-component>
+			<ui-component name="part" path="common.page" config="if:alarms;reload:alarms/reload;url:/parts/alarms.html"></ui-component>
+			<ui-component name="part" path="common.page" config="if:users;reload:users/reload;url:/parts/users.html"></ui-component>
 			<!--<div data---="part__common.page__if:stats;url:/templates/stats.html"></div>-->
 		</div>
 	</div>
 
-	<div data---="importer__common.form__if:profileform;url:/forms/profile.html"></div>
+	<ui-component name="importer" path="common.form" config="if:profileform;url:/forms/profile.html"></ui-component>
 
 	@{json(user, 'userdata')}
 
