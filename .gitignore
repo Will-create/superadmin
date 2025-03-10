@@ -4,3 +4,4 @@ databases/applications.json
 debug.pid
 tmp/
 node_modules
+index.js.*
